@@ -11,19 +11,19 @@ jobs:
 
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v5   # به‌روزرسانی به v5
+      uses: actions/checkout@v5
 
     - name: Set up JDK 17
-      uses: actions/setup-java@v5  # به‌روزرسانی به v5
+      uses: actions/setup-java@v5
       with:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Grant Execute Permission for Gradlew
-      run: chmod +x ./gradlew
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v4
 
     - name: Build Debug APK
-      run: ./gradlew assembleDebug --stacktrace --info  # افزودن --info برای لاگ بیشتر
+      run: gradle assembleDebug --stacktrace
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
