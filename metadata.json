@@ -1,0 +1,6 @@
+{
+  "name": "اضافه کاری",
+  "description": "نرم افزار پیشرفته مدیریت تردد، اضافه کاری، مرخصی، ماموریت، وام و محاسبه حقوق و دستمزد قانون کار",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
